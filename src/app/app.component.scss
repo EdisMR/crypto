@@ -1,0 +1,69 @@
+.block{
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+a{
+  color: hsl(197, 74%, 45%);
+  &:visited{
+    color: hsl(197, 74%, 45%);
+  }
+  &:hover{
+    color: hsl(197, 74%, 50%);
+  }
+  &:active{
+    color: hsl(197, 74%, 42%);
+  }
+}
+
+button{
+  background-color: hsl(202, 80%, 55%);
+  color: #eee;
+  &:hover{
+    background-color: hsl(202, 80%, 60%);
+  }
+  &:active{
+    background-color: hsl(202, 80%, 50%);
+  }
+  &:disabled{
+    background-color: hsl(202, 30%, 50%);
+  }
+}
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.input-card{
+  width: 500px;
+  max-width: 95vw;
+  word-break: break-all;
+  margin-top: 50px;
+  input,textarea{
+    background-color: #333;
+    color: #eee;
+    min-height: 120px;
+  }
+  textarea{
+    width: 100%;
+    resize: vertical;
+    font-size: 1.1rem;
+
+  }
+}
+
+footer{
+  margin-top: 100px;
+  text-align: center;
+}
+
+
+@media (max-width:700px){
+  .input-card{
+
+  }
+}

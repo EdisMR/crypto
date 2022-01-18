@@ -10,14 +10,14 @@
       <!-- Title -->
       <div class="block">
         <div class="rectangleTitle">
-          <span class="titleText">Codificar</span>
+          <span class="titleText">Encode</span>
         </div>
       </div>
 
       <div class="block">
         <div class="inputContainer">
           <fieldset>
-            <legend> Texto a codificar </legend>
+            <legend> Text to encode </legend>
             <textarea #inputEncodeTextArea (input)="encodeText(inputEncodeTextArea.value)"></textarea>
           </fieldset>
         </div>
@@ -26,15 +26,15 @@
       <div class="block">
         <div class="inputContainer">
           <fieldset>
-            <legend>Resultado</legend>
+            <legend>Result</legend>
             <div>{{encodedText}}</div>
           </fieldset>
         </div>
       </div>
 
       <div class="block">
-        <button (click)="copyText(encodedText)" [disabled]='encodedText=="" ? true : false '>Copiar resultado</button>
-        <button (click)="restartEncoded();inputEncodeTextArea.value='';">Reiniciar entrada</button>
+        <button (click)="copyText(encodedText)" [disabled]='encodedText=="" ? true : false '>Copy result</button>
+        <button (click)="restartEncoded();inputEncodeTextArea.value='';">Restart Input</button>
       </div>
     </div>
 
@@ -42,14 +42,14 @@
       <!-- Title -->
       <div class="block">
         <div class="rectangleTitle">
-          <span class="titleText">Decodificar</span>
+          <span class="titleText">Decode</span>
         </div>
       </div>
 
       <div class="block">
         <div class="inputContainer">
           <fieldset>
-            <legend> Texto a decodificar </legend>
+            <legend> Text to decode </legend>
             <textarea #inputDecodeTextArea (input)="decodeText(inputDecodeTextArea.value)"></textarea>
           </fieldset>
         </div>
@@ -58,15 +58,15 @@
       <div class="block">
         <div class="inputContainer">
           <fieldset>
-            <legend>Resultado</legend>
+            <legend>Result</legend>
             <div>{{decodedText}}</div>
           </fieldset>
         </div>
       </div>
 
       <div class="block">
-        <button (click)="copyText(decodedText)" [disabled]='decodedText=="" ? true : false '>Copiar resultado</button>
-        <button (click)="restartDecoded();inputDecodeTextArea.value='';">Reiniciar entrada</button>
+        <button (click)="copyText(decodedText)" [disabled]='decodedText=="" ? true : false '>Copy result</button>
+        <button (click)="restartDecoded();inputDecodeTextArea.value='';">Restart Input</button>
       </div>
 
     </div>

@@ -1,81 +1,84 @@
-<header class="block">
+<header>
   <h1>Easy Base64 Encoder/Decoder</h1>
 </header>
 
-<div class="block">
-  <div class="flex-container">
+<main>
+
+  <div class="block">
+    <div class="flex-container">
 
 
-    <div class="input-card">
-      <!-- Title -->
-      <div class="block">
-        <div class="rectangleTitle">
-          <span class="titleText">Encode</span>
+      <div class="input-card">
+        <!-- Title -->
+        <div class="block">
+          <div class="rectangleTitle">
+            <span class="titleText">Encode</span>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="inputContainer">
+            <fieldset>
+              <legend> Text to encode </legend>
+              <textarea #inputEncodeTextArea (input)="encodeText(inputEncodeTextArea.value)"></textarea>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="inputContainer">
+            <fieldset>
+              <legend>Result</legend>
+              <div>{{encodedText}}</div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="block">
+          <button (click)="copyText(encodedText)" [disabled]='encodedText=="" ? true : false '>Copy result</button>
+          <button (click)="restartEncoded();inputEncodeTextArea.value='';">Restart Input</button>
         </div>
       </div>
 
-      <div class="block">
-        <div class="inputContainer">
-          <fieldset>
-            <legend> Text to encode </legend>
-            <textarea #inputEncodeTextArea (input)="encodeText(inputEncodeTextArea.value)"></textarea>
-          </fieldset>
+      <div class="input-card">
+        <!-- Title -->
+        <div class="block">
+          <div class="rectangleTitle">
+            <span class="titleText">Decode</span>
+          </div>
         </div>
+
+        <div class="block">
+          <div class="inputContainer">
+            <fieldset>
+              <legend> Text to decode </legend>
+              <textarea #inputDecodeTextArea (input)="decodeText(inputDecodeTextArea.value)"></textarea>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="block">
+          <div class="inputContainer">
+            <fieldset>
+              <legend>Result</legend>
+              <div>{{decodedText}}</div>
+            </fieldset>
+          </div>
+        </div>
+
+        <div class="block">
+          <button (click)="copyText(decodedText)" [disabled]='decodedText=="" ? true : false '>Copy result</button>
+          <button (click)="restartDecoded();inputDecodeTextArea.value='';">Restart Input</button>
+        </div>
+
       </div>
 
-      <div class="block">
-        <div class="inputContainer">
-          <fieldset>
-            <legend>Result</legend>
-            <div>{{encodedText}}</div>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="block">
-        <button (click)="copyText(encodedText)" [disabled]='encodedText=="" ? true : false '>Copy result</button>
-        <button (click)="restartEncoded();inputEncodeTextArea.value='';">Restart Input</button>
-      </div>
     </div>
-
-    <div class="input-card">
-      <!-- Title -->
-      <div class="block">
-        <div class="rectangleTitle">
-          <span class="titleText">Decode</span>
-        </div>
-      </div>
-
-      <div class="block">
-        <div class="inputContainer">
-          <fieldset>
-            <legend> Text to decode </legend>
-            <textarea #inputDecodeTextArea (input)="decodeText(inputDecodeTextArea.value)"></textarea>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="block">
-        <div class="inputContainer">
-          <fieldset>
-            <legend>Result</legend>
-            <div>{{decodedText}}</div>
-          </fieldset>
-        </div>
-      </div>
-
-      <div class="block">
-        <button (click)="copyText(decodedText)" [disabled]='decodedText=="" ? true : false '>Copy result</button>
-        <button (click)="restartDecoded();inputDecodeTextArea.value='';">Restart Input</button>
-      </div>
-
-    </div>
-
   </div>
-</div>
+</main>
 
 <footer>
   <div>
-    <a href="https://github.com/EdisMR" target="_blank">@Edis MR</a>
+    Created by <a href="https://github.com/EdisMR" target="_blank">@Edis MR</a>
   </div>
 </footer>

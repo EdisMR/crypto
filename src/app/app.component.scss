@@ -1,3 +1,18 @@
+header{
+  margin-bottom: 50px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  background-color: steelblue;
+}
+h1{
+  margin: 0;
+}
+
+main{
+  min-height: 70vh;
+}
+
 .block{
   display: block;
   margin: 0;
@@ -18,16 +33,17 @@ a{
 }
 
 button{
-  background-color: hsl(202, 80%, 55%);
+  background-color: hsl(207, 44%, 49%);
   color: #eee;
+  margin-right: 10px;
   &:hover{
-    background-color: hsl(202, 80%, 60%);
+    background-color: hsl(207, 44%, 57%);
   }
   &:active{
-    background-color: hsl(202, 80%, 50%);
+    background-color: hsl(207, 44%, 40%);
   }
   &:disabled{
-    background-color: hsl(202, 30%, 50%);
+    background-color: hsl(207, 20%, 49%);
   }
 }
 
@@ -58,7 +74,14 @@ button{
 
 footer{
   margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
+  background-color: steelblue;
+  color: #eee;
+  a{
+    color: white;
+  }
 }
 
 
